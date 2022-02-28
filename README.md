@@ -10,7 +10,7 @@ Update The A Record of your domain on Godaddy DNS to your current IP Address.
 ## Usage
 Be sure to get your API Key from Godaddy before using the script.
 
-You must change the 'mydomain' & 'gdapikeAy' fields in the dyndnsgd script
+You must change the 'mydomain' & 'gdapikey' fields in the dyndnsgd script
 
 The Script Can be run manually, but would be best used as a cron job.
 
