@@ -8,6 +8,13 @@ Update The A Record of your domain on Godaddy DNS to your current IP Address.
 (Useful for ISPs that constantly change your home IP address)
 
 ## Usage
+Be sure to get your API Key from Godaddy before using the script.
+
+You must change the domain name & API Key fields in the dyndnsgd script
+
+The Script Can be run manually, but would be best used as a cron job.
+
+## Installation
 ```bash
 cd ~/Downloads
 git clone https://github.com/necromancer420/godaddy-ddns.git
@@ -15,14 +22,15 @@ cd godaddy-ddns
 chmod +x dyndnsgd
 ./dyndnsgd
 ```
-or add the following to your crontab
-*/10 * * * *    ~/Downloads/godaddy-ddns/dyndnsgd > /dev/null
-...to do so...
+or add the script to your crontab...
 ```bash
 sudo crontab -e
 ```
-now add the line from above, then save the file and exit. 
-Then Reboot
+Add the following line to the bottom of the file 
+```bash
+*/10 * * * *    ~/Downloads/godaddy-ddns/dyndnsgd > /dev/null
+```
+Save the file and exit, then Reboot.
 
 ## License
 [Unilicense](https://choosealicense.com/licenses/unlicense/#)
