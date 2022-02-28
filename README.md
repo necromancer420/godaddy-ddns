@@ -12,11 +12,17 @@ Update The A Record of your domain on Godaddy DNS to your current IP Address.
 cd ~/Downloads
 git clone https://github.com/necromancer420/godaddy-ddns.git
 cd godaddy-ddns
-chmod u+x dyndnsgd
+chmod +x dyndnsgd
 ./dyndnsgd
 ```
-or...
-*/10 * * * *    /usr/local/sbin/gd-dyndns > /dev/null
+or add the following to your crontab
+*/10 * * * *    ~/Downloads/godaddy-ddns/dyndnsgd > /dev/null
+...to do so...
+```bash
+sudo crontab -e
+```
+now add the line from above, then save the file and exit. 
+Then Reboot
 
 ## License
 [Unilicense](https://choosealicense.com/licenses/unlicense/#)
